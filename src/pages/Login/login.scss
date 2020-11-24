@@ -1,0 +1,74 @@
+.container {
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.authentication {
+    background-image: url(../../assets/images/auth-bg.svg);
+    background-position: center;
+    padding-right:30px;
+    padding-left: 30px;
+}
+.header-auth img{
+    position: absolute;
+    top:27px;
+}
+
+.main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.left {
+    flex: 1;
+
+    .button {
+        width: 150px;
+    }
+}
+
+.right {
+    width: 350px;
+
+    .section-title {
+        font-weight: 900;
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        width:100%;
+    }
+}
+
+.ilustration {
+    font-family: Abhaya Libre Medium;
+    font-weight: 500;
+    font-size: 100px;
+
+    .everything {
+        margin-left: 130px;
+    }
+}
+.music-image {
+    position: absolute;
+}
+.tagline {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+    color: #8B8B8B;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.green {
+    color: #03F387;
+}
