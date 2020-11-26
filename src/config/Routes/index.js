@@ -1,22 +1,21 @@
-import {React} from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {AppContextProvider} from '../../context/appContext';
+import PrivateRoute from '../PrivateRoute';
+
+
 import { Login, Register, Home } from '../../pages';
 
 const Routes = () => {
     return (
-        <Router>
-            <Switch>
-                <Route path="/login">
-                    <Login/>
-                </Route>
-                <Route path="/register">
-                    <Register/>
-                </Route>
-                <Route path="/">
-                    <Home/>
-                </Route>
-            </Switch>
-        </Router>
+        <AppContextProvider>
+            <Router>
+                <Switch>
+                    <Route exact path="/login"><Login/></Route>
+                    <Route exact path="/register"><Register/></Route>
+                    <PrivateRoute path="/" component={Home}/>
+                </Switch>
+            </Router>
+        </AppContextProvider>
     )
 }
 
