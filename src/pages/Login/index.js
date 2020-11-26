@@ -1,25 +1,24 @@
 import React from 'react'
-import { Logo, Music } from '../../assets';
-import { Input, Button, Tagline } from '../../components';
+import {Link} from 'react-router-dom';
+import { Input, Button, Tagline, Headerauth} from '../../components';
+
 import './login.scss';
 
 const Login = () => {
     return (
         <div className="container">
             <div className="authentication">
-                <div className="header-auth">
-                    <img src={Logo}></img>
-                </div>
+                <Headerauth/>
                 <div className="main-page">
                     <div className="left">
                         <Tagline />
-                        <Button title="Register"/>
+                        <Link to="/register"><Button title="Register"/></Link>
                     </div>
                     <div className="right">
                         <div className="section-title green">Login</div>
                         <Input placeholder="Username"/>
                         <Input type="Password" placeholder="Password"/>
-                        <Button title="Login"/>
+                        <Link to="/"><Button title="Login"/></Link>
                     </div>
                 </div>
             </div>
