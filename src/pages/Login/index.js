@@ -32,7 +32,6 @@ const Login = () => {
                         <Input placeholder="Username"/>
                         <Input type="Password" placeholder="Password"/>
                         <Button title="Login" onClick={handleLogin}/>
-                        State Login saat ini {state.isLogin ? "Sedang Login " : "Belum Login"}
                     </div>
                 </div>
             </div>
