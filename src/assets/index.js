@@ -5,5 +5,17 @@ import FileAttach from './icon/fileattach.svg';
 import PayIcon from './icon/pay-icon.svg';
 import LogoutIcon from './icon/logout-icon.svg';
 import CallOut from './icon/callout.svg';
+import AddMusic from './icon/addmusic.svg';
+import AddArtist from './icon/addartist.svg';
 
-export {Music, Logo, Slider1, FileAttach, PayIcon, LogoutIcon, CallOut}
+export {
+            Music, 
+            Logo, 
+            Slider1, 
+            FileAttach, 
+            PayIcon, 
+            LogoutIcon, 
+            CallOut,
+            AddMusic,
+            AddArtist
+        }

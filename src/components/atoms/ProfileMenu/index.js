@@ -1,6 +1,6 @@
 import React, {useState,useContext} from 'react';
 import {AppContext} from "../../../context/appContext";
-import { PayIcon, LogoutIcon, CallOut } from "../../../assets";
+import { PayIcon, LogoutIcon, CallOut, AddMusic, AddArtist} from "../../../assets";
 import {Link, useHistory} from 'react-router-dom';
 import { Dropdown } from "react-bootstrap";
 
@@ -12,6 +12,10 @@ const ProfileMenu = () => {
 
     const toPay =() => {
         router.push("/makepayment");
+    }
+
+    const toTransaction =() => {
+      router.push("/transactions");
     }
     
     const handleLogout = () => {
@@ -69,14 +73,15 @@ const ProfileMenu = () => {
                 {
                   state.payment ? 
                   <>
-                    <Dropdown.Item eventKey="1" onClick={toPay}><img src={PayIcon} className="dropdown-icon"></img>Add Music</Dropdown.Item>
-                    <Dropdown.Item eventKey="2" onClick={toPay}><img src={PayIcon} className="dropdown-icon"></img>Add Artist</Dropdown.Item>
+                    <Dropdown.Item eventKey="1" onClick={toPay}><img src={AddMusic} className="dropdown-icon"></img>Add Music</Dropdown.Item>
+                    <Dropdown.Item eventKey="2" onClick={toPay}><img src={AddArtist} className="dropdown-icon"></img>Add Artist</Dropdown.Item>
+                    <Dropdown.Item eventKey="3" onClick={toTransaction}><img src={PayIcon} className="dropdown-icon"></img>Transactions</Dropdown.Item>
                   </>  
                   :
-                    <Dropdown.Item eventKey="1" onClick={toPay}><img src={PayIcon} className="dropdown-icon"></img>Pay</Dropdown.Item> 
+                    <Dropdown.Item eventKey="4" onClick={toPay}><img src={PayIcon} className="dropdown-icon"></img>Pay</Dropdown.Item> 
                 }
                 <Dropdown.Divider />
-                <Dropdown.Item eventKey="2" onClick={handleLogout}><img src={LogoutIcon} className="dropdown-icon"></img>Logout</Dropdown.Item>
+                <Dropdown.Item eventKey="5" onClick={handleLogout}><img src={LogoutIcon} className="dropdown-icon"></img>Logout</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </div>

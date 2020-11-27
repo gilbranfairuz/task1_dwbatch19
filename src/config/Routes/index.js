@@ -3,7 +3,7 @@ import {AppContextProvider} from '../../context/appContext';
 import PrivateRoute from '../PrivateRoute';
 
 
-import { Login, Register, Home, MakePayment } from '../../pages';
+import { Login, Register, Home, MakePayment, Transactions } from '../../pages';
 
 const Routes = () => {
     return (
@@ -13,6 +13,7 @@ const Routes = () => {
                     <Route exact path="/login"><Login/></Route>
                     <Route exact path="/register"><Register/></Route>
                     <PrivateRoute path="/makepayment" component={MakePayment}/>
+                    <PrivateRoute path="/transactions" component={Transactions}/>
                     <PrivateRoute path="/" component={Home}/>
                 </Switch>
             </Router>
