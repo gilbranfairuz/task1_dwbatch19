@@ -2,7 +2,7 @@ import React from 'react';
 import {useContext} from 'react';
 import {AppContext} from '../../../context/appContext';
 import './musiccard.scss';
-
+import {Link} from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal'
 
 
@@ -36,9 +36,11 @@ const MusicCard = ({musicdata}) => {
           centered
         >
           <Modal.Body className="make-payment">
+          <Link to="/makepayment">
           <p>
               Please make a payment to listen to the hottest songs in the world
           </p>
+          </Link>
           </Modal.Body>
         </Modal>
       );

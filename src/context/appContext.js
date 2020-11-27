@@ -3,7 +3,7 @@ import {createContext, useReducer} from 'react';
 export const AppContext = createContext();
 
 const initialState = {
-    isLogin: true,
+    isLogin: false,
     payment: false,
 };
 
@@ -18,6 +18,16 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 isLogin: false,
+            };
+        case "PAYMENT":
+            return {
+                ...state,
+                payment: true,
+            };
+        case "PAYOUT":
+            return {
+                ...state,
+                payment: false,
             };
         default:
             throw new Error();
