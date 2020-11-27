@@ -66,7 +66,15 @@ const ProfileMenu = () => {
             <Dropdown>
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components"></Dropdown.Toggle>
                 <Dropdown.Menu className="dropdown-menu-right" as={CustomMenu}>
-                <Dropdown.Item eventKey="1" onClick={toPay}><img src={PayIcon} className="dropdown-icon"></img>Pay</Dropdown.Item>
+                {
+                  state.payment ? 
+                  <>
+                    <Dropdown.Item eventKey="1" onClick={toPay}><img src={PayIcon} className="dropdown-icon"></img>Add Music</Dropdown.Item>
+                    <Dropdown.Item eventKey="2" onClick={toPay}><img src={PayIcon} className="dropdown-icon"></img>Add Artist</Dropdown.Item>
+                  </>  
+                  :
+                    <Dropdown.Item eventKey="1" onClick={toPay}><img src={PayIcon} className="dropdown-icon"></img>Pay</Dropdown.Item> 
+                }
                 <Dropdown.Divider />
                 <Dropdown.Item eventKey="2" onClick={handleLogout}><img src={LogoutIcon} className="dropdown-icon"></img>Logout</Dropdown.Item>
                 </Dropdown.Menu>
