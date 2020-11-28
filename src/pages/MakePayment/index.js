@@ -41,7 +41,8 @@ import './makepayment.scss';
     return (
         <div className="make-payment-page">
             <Header/>
-            <div className="container" style={{ height:"70vh"}}>
+            <div className="container d-flex align-items-center" style={{ height:"70vh"}}>
+                <div style={{ width:"100%"}}>
                     <div className="row d-flex justify-content-center title">
                         <div className="section-title green">Premium</div>
                     </div>
@@ -53,14 +54,18 @@ import './makepayment.scss';
                     </div>
                     <div className="row d-flex justify-content-center">
                         <div className="col-4">
-                        <Input placeholder="Input your account number"/>
+                            <Input placeholder="Input your account number"/>
                         </div>
-                        
                     </div>
-                    <InputFile prop="Attach proof of transfer"/>
+                    <div className="row d-flex justify-content-center">
+                        <div className="col-4">
+                            <InputFile prop="Attach proof of transfer"/>
+                        </div>
+                    </div>
                     <div className="row d-flex justify-content-center send-payment">
                         <Button title="Send" onClick={handlePayment}/>
                     </div>
+                </div>
             </div>
             <PaymentSuccess
             show={modalShow}
