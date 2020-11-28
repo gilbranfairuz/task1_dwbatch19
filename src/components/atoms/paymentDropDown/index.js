@@ -43,9 +43,9 @@ const PaymentDropDown = () => {
         <div className="d-flex justify-content-center profile-menu">
             <Dropdown>
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components"></Dropdown.Toggle>
-                <Dropdown.Menu className="dropdown-menu-right" as={CustomMenu}>
-                    <Dropdown.Item eventKey="1" className="approve">Approve</Dropdown.Item>
-                    <Dropdown.Item eventKey="2" className="cancel">Cancel</Dropdown.Item>
+                <Dropdown.Menu className="payment-dropdown dropdown-menu-right" as={CustomMenu}>
+                    <Dropdown.Item eventKey="1" className="d-flex justify-content-center approve">Approve</Dropdown.Item>
+                    <Dropdown.Item eventKey="2" className="d-flex justify-content-center cancel">Cancel</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </div>
