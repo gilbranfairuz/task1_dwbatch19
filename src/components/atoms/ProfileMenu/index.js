@@ -66,7 +66,7 @@ const ProfileMenu = () => {
       );
 
     return (
-        <div className="col d-flex justify-content-end">
+        <div className="col d-flex justify-content-end profile-menu">
             <Dropdown>
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components"></Dropdown.Toggle>
                 <Dropdown.Menu className="dropdown-menu-right" as={CustomMenu}>

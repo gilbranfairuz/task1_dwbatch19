@@ -5,8 +5,6 @@ import './musiccard.scss';
 import {Link} from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal'
 
-
-
 const MusicCard = ({musicdata}) => {
     const {id, title, year, album, imageUrl} = musicdata;
     const [modalShow, setModalShow] = React.useState(false);
@@ -14,21 +12,6 @@ const MusicCard = ({musicdata}) => {
 
     function MakePayment(props) {
       return (
-        state.payment ?
-        <Modal
-          {...props}
-          size="lg"
-          aria-labelledby="contained-modal-title-vcenter"
-          centered
-          
-        >
-          <Modal.Body className="make-payment">
-          <p>
-              Please Make a Payment 2
-          </p>
-          </Modal.Body>
-        </Modal>
-        :
         <Modal
           {...props}
           size="lg"
@@ -72,7 +55,6 @@ const MusicCard = ({musicdata}) => {
                     </div>
                 </div>
             </div></a>
-
             <MakePayment
             show={modalShow}
             onHide={() => setModalShow(false)}

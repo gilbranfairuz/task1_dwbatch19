@@ -7,6 +7,8 @@ import LogoutIcon from './icon/logout-icon.svg';
 import CallOut from './icon/callout.svg';
 import AddMusic from './icon/addmusic.svg';
 import AddArtist from './icon/addartist.svg';
+import ActionArrow from './icon/action-arrow.svg';
+import PayDropDownIcon  from './icon/pay-dropdown-arrow.svg';
 
 export {
             Music, 
@@ -17,5 +19,7 @@ export {
             LogoutIcon, 
             CallOut,
             AddMusic,
-            AddArtist
+            AddArtist,
+            ActionArrow,
+            PayDropDownIcon
         }

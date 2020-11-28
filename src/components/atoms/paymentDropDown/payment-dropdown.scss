@@ -1,0 +1,19 @@
+.transactions-page .dropdown-menu {
+    width: 0 !important;
+}
+
+.transactions-page .dropdown-item {
+    display: flex !important;
+    justify-content: center;
+}
+.transactions-page .dropdown-menu a:hover {
+    color:white !important;
+}
+
+.transactions-page .dropdown-menu .approve {
+    color:#0ACF83 !important;
+}
+
+.transactions-page .dropdown-menu .cancel {
+    color: #FF0000 !important;
+}
