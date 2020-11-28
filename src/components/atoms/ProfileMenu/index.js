@@ -15,7 +15,7 @@ const ProfileMenu = () => {
     }
 
     const toAddArtist =() => {
-      router.push("/addmusic");
+      router.push("/addartist");
     }
 
     const toPay =() => {
