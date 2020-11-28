@@ -30,15 +30,6 @@ const Transactions = () => {
                                     datatransactions = {datatransactions}
                                     key={datatransactions.id}
                                 />
-                                // <tr>
-                                //     <td>{userData.id}</td>
-                                //     <td>{userData.user}</td>
-                                //     <td>{userData.paymentEvidence}</td>
-                                //     <td>{userData.activeDay} / Hari</td>
-                                //     <td className={userData.statusUser}>{userData.statusUser}</td>
-                                //     <td className={userData.statusPayment}>{userData.statusPayment}</td>
-                                //     <td><div className="d-flex justify-content-center"><img src={ActionArrow}></img></div></td>
-                                // </tr>
                             ))
                         }
                     </tbody>

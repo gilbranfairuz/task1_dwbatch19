@@ -10,6 +10,14 @@ const ProfileMenu = () => {
     const [state, dispatch] = useContext(AppContext);
     const router = useHistory();
 
+    const toAddMusic =() => {
+      router.push("/addmusic");
+    }
+
+    const toAddArtist =() => {
+      router.push("/addmusic");
+    }
+
     const toPay =() => {
         router.push("/makepayment");
     }
@@ -73,8 +81,8 @@ const ProfileMenu = () => {
                 {
                   state.payment ? 
                   <>
-                    <Dropdown.Item eventKey="1" onClick={toPay}><img src={AddMusic} className="dropdown-icon"></img>Add Music</Dropdown.Item>
-                    <Dropdown.Item eventKey="2" onClick={toPay}><img src={AddArtist} className="dropdown-icon"></img>Add Artist</Dropdown.Item>
+                    <Dropdown.Item eventKey="1" onClick={toAddMusic}><img src={AddMusic} className="dropdown-icon"></img>Add Music</Dropdown.Item>
+                    <Dropdown.Item eventKey="2" onClick={toAddArtist}><img src={AddArtist} className="dropdown-icon"></img>Add Artist</Dropdown.Item>
                     <Dropdown.Item eventKey="3" onClick={toTransaction}><img src={PayIcon} className="dropdown-icon"></img>Transactions</Dropdown.Item>
                   </>  
                   :

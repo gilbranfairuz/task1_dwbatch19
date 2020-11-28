@@ -1,13 +1,12 @@
-.input {
-    background: rgba(210, 210, 210, 0.25);
-    border: 2px solid #BCBCBC;
-    box-sizing: border-box;
-    border-radius: 5px;
-    width: 350px;
-    height: 50px;
-    font-size:1.25 rem;
-    font-weight: normal;
-    line-height: 25px;
-    color: #BCB3B3;
+.form-control, .input {
+    background: rgba(210, 210, 210, 0.25) !important;
+    border: 2px solid #BCBCBC !important;
+    box-sizing: border-box !important;
+    border-radius: 5px !important;
+    height: 50px !important;
+    font-size:1.25 rem !important;
+    font-weight: normal !important;
+    line-height: 25px !important;
+    color: white !important;
     margin-bottom: 20px;
 }
