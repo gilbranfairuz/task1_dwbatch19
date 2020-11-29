@@ -2,7 +2,13 @@
     margin-top:30px;
     margin-bottom:30px;
 }
-
+.slide .owl-carousel .owl-stage {
+    display: flex;
+    justify-content: center;
+}
+.slide .owl-carousel .owl-item {
+    width:700px !important;
+}
 .carousel-control-prev, .carousel-control-next {
     display: none !important;
 }
