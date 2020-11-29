@@ -17,18 +17,17 @@
     width: 315px;
     height: 310px;
     position: absolute;
+    z-index: 2;
 }
 .slide .shadow-left {
     left:0;
     background: linear-gradient(90deg, #C4C4C4 0%, #00031F 0.01%, rgba(0, 0, 0, 0) 96.51%);
-    z-index: 2;
 }
 
 .slide .shadow-right {
     right:0;
     background: linear-gradient(90deg, #C4C4C4 0%, #00031F 0.01%, rgba(0, 0, 0, 0) 96.51%);
     transform: rotate(180deg);
-    z-index: 2;
 }
 
 .slide .owl-dots {

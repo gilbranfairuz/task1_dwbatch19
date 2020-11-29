@@ -29,7 +29,6 @@ const ProfileMenu = () => {
     const handleLogout = () => {
         dispatch({
             type: "LOGOUT",
-            type: "PAYOUT",
         });
         router.push("/Login");
     };

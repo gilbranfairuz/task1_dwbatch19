@@ -5,6 +5,8 @@ export const AppContext = createContext();
 const initialState = {
     isLogin: false,
     payment: false,
+    player:false,
+    musics:"",
 };
 
 const reducer = (state, action) => {
@@ -18,6 +20,9 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 isLogin: false,
+                player:false,
+                payment:false,
+                musics:"",
             };
         case "PAYMENT":
             return {
@@ -28,6 +33,12 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 payment: false,
+            };
+        case "PLAYER_ON":
+            return {
+                ...state,
+                 player: true,
+                 musics: action.payload,
             };
         default:
             throw new Error();

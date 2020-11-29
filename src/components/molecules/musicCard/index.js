@@ -5,10 +5,10 @@ import './musiccard.scss';
 import {Link} from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal'
 
-const MusicCard = ({musicdata}) => {
+const MusicCard = ({musicdata, handlePlayer}) => {
     const {id, title, year, album, imageUrl} = musicdata;
     const [modalShow, setModalShow] = React.useState(false);
-    const [state] = useContext(AppContext);
+    const [state, dispatch] = useContext(AppContext);
 
     function MakePayment(props) {
       return (
@@ -29,9 +29,15 @@ const MusicCard = ({musicdata}) => {
       );
     };
 
+    // const setPlayer = () =>{
+    //     dispatch({
+    //         type: "PLAYER_ON", 
+    //     });
+    // }
+
     return (
-        <div className="col-md-2">
-            <a onClick={()=> setModalShow(true)} className="play-music">
+        <div className="col-2">
+            <a onClick={state.payment ? ()=>handlePlayer(title) : ()=> setModalShow(true)} className="play-music">
             <div className="card mb-4 card-music">
                 <div className="card-body card-music-picture">
                     <img 
@@ -46,11 +52,11 @@ const MusicCard = ({musicdata}) => {
                     />
                 </div>
                 <div className="card-footer card-music-detail">
-                    <div className="row">
-                        <div className="col-7 music-title">{title}</div>
-                        <div className="col-5 music-year">{year}</div>
+                    <div>
+                        <div className="card-text music-title">{title}</div>
+                        <div className="card-text music-year">{year}</div>
                     </div>
-                    <div className="album">
+                    <div className="card-text album">
                         {album}
                     </div>
                 </div>
